@@ -20,6 +20,13 @@
 		0BC0CE802AC98128009A75FC /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE772AC97FFA009A75FC /* Http.swift */; };
 		0BC0CE822AC9835B009A75FC /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE812AC9835B009A75FC /* Prompt.swift */; };
 		0BC0CE842AC98D05009A75FC /* XcodeGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE832AC98D05009A75FC /* XcodeGPT.swift */; };
+		0BC0CE862AC99358009A75FC /* XcodeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE852AC99358009A75FC /* XcodeCommand.swift */; };
+		0BC0CE8E2AC9954C009A75FC /* DocumentationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE882AC9954C009A75FC /* DocumentationCommand.swift */; };
+		0BC0CE8F2AC9954C009A75FC /* UnitTestCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE892AC9954C009A75FC /* UnitTestCommand.swift */; };
+		0BC0CE902AC9954C009A75FC /* CodableToJsonCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE8A2AC9954C009A75FC /* CodableToJsonCommand.swift */; };
+		0BC0CE912AC9954C009A75FC /* CustomCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE8B2AC9954C009A75FC /* CustomCommand.swift */; };
+		0BC0CE922AC9954C009A75FC /* AutocompleteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE8C2AC9954C009A75FC /* AutocompleteCommand.swift */; };
+		0BC0CE932AC9954C009A75FC /* CodeAnalysisCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE8D2AC9954C009A75FC /* CodeAnalysisCommand.swift */; };
 		0BFDCAAB2AC97D270006B159 /* XcodeChatGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDCAAA2AC97D270006B159 /* XcodeChatGPTApp.swift */; };
 		0BFDCAAD2AC97D270006B159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDCAAC2AC97D270006B159 /* ContentView.swift */; };
 		0BFDCAAF2AC97D280006B159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDCAAE2AC97D280006B159 /* Assets.xcassets */; };
@@ -77,6 +84,13 @@
 		0BC0CE7C2AC97FFA009A75FC /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 		0BC0CE812AC9835B009A75FC /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		0BC0CE832AC98D05009A75FC /* XcodeGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPT.swift; sourceTree = "<group>"; };
+		0BC0CE852AC99358009A75FC /* XcodeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeCommand.swift; sourceTree = "<group>"; };
+		0BC0CE882AC9954C009A75FC /* DocumentationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentationCommand.swift; sourceTree = "<group>"; };
+		0BC0CE892AC9954C009A75FC /* UnitTestCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestCommand.swift; sourceTree = "<group>"; };
+		0BC0CE8A2AC9954C009A75FC /* CodableToJsonCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableToJsonCommand.swift; sourceTree = "<group>"; };
+		0BC0CE8B2AC9954C009A75FC /* CustomCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCommand.swift; sourceTree = "<group>"; };
+		0BC0CE8C2AC9954C009A75FC /* AutocompleteCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteCommand.swift; sourceTree = "<group>"; };
+		0BC0CE8D2AC9954C009A75FC /* CodeAnalysisCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeAnalysisCommand.swift; sourceTree = "<group>"; };
 		0BFDCAA72AC97D270006B159 /* XcodeChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFDCAAA2AC97D270006B159 /* XcodeChatGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeChatGPTApp.swift; sourceTree = "<group>"; };
 		0BFDCAAC2AC97D270006B159 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,11 +131,12 @@
 		0BC0CE622AC97F9C009A75FC /* XcodeChatGPTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				0BC0CE872AC994C2009A75FC /* Commands */,
 				0BC0CE752AC97FFA009A75FC /* Services */,
 				0BC0CE732AC97FDA009A75FC /* Configuration.swift */,
 				0BC0CE812AC9835B009A75FC /* Prompt.swift */,
 				0BC0CE632AC97F9C009A75FC /* SourceEditorExtension.swift */,
-				0BC0CE652AC97F9C009A75FC /* JsonToCodableCommand.swift */,
+				0BC0CE852AC99358009A75FC /* XcodeCommand.swift */,
 				0BC0CE832AC98D05009A75FC /* XcodeGPT.swift */,
 				0BC0CE672AC97F9C009A75FC /* Info.plist */,
 				0BC0CE682AC97F9C009A75FC /* XcodeChatGPTExtension.entitlements */,
@@ -147,6 +162,20 @@
 				0BC0CE7C2AC97FFA009A75FC /* OpenAIAPI.swift */,
 			);
 			path = OpenAI;
+			sourceTree = "<group>";
+		};
+		0BC0CE872AC994C2009A75FC /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0CE652AC97F9C009A75FC /* JsonToCodableCommand.swift */,
+				0BC0CE8A2AC9954C009A75FC /* CodableToJsonCommand.swift */,
+				0BC0CE8C2AC9954C009A75FC /* AutocompleteCommand.swift */,
+				0BC0CE892AC9954C009A75FC /* UnitTestCommand.swift */,
+				0BC0CE882AC9954C009A75FC /* DocumentationCommand.swift */,
+				0BC0CE8B2AC9954C009A75FC /* CustomCommand.swift */,
+				0BC0CE8D2AC9954C009A75FC /* CodeAnalysisCommand.swift */,
+			);
+			path = Commands;
 			sourceTree = "<group>";
 		};
 		0BFDCA9E2AC97D270006B159 = {
@@ -289,14 +318,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC0CE932AC9954C009A75FC /* CodeAnalysisCommand.swift in Sources */,
 				0BC0CE7E2AC98123009A75FC /* OpenAIAPI.swift in Sources */,
 				0BC0CE822AC9835B009A75FC /* Prompt.swift in Sources */,
 				0BC0CE742AC97FDA009A75FC /* Configuration.swift in Sources */,
 				0BC0CE842AC98D05009A75FC /* XcodeGPT.swift in Sources */,
 				0BC0CE7F2AC98128009A75FC /* Client.swift in Sources */,
+				0BC0CE922AC9954C009A75FC /* AutocompleteCommand.swift in Sources */,
+				0BC0CE912AC9954C009A75FC /* CustomCommand.swift in Sources */,
 				0BC0CE642AC97F9C009A75FC /* SourceEditorExtension.swift in Sources */,
 				0BC0CE662AC97F9C009A75FC /* JsonToCodableCommand.swift in Sources */,
+				0BC0CE862AC99358009A75FC /* XcodeCommand.swift in Sources */,
+				0BC0CE8F2AC9954C009A75FC /* UnitTestCommand.swift in Sources */,
 				0BC0CE7D2AC98123009A75FC /* OpenAIService.swift in Sources */,
+				0BC0CE8E2AC9954C009A75FC /* DocumentationCommand.swift in Sources */,
+				0BC0CE902AC9954C009A75FC /* CodableToJsonCommand.swift in Sources */,
 				0BC0CE802AC98128009A75FC /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

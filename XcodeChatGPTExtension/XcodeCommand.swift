@@ -1,5 +1,5 @@
 //
-//  JsonToCodableCommand.swift
+//  XcodeCommand.swift
 //  XcodeChatGPTExtension
 //
 //  Created by Daniel Vela on 1/10/23.
@@ -8,14 +8,16 @@
 import Foundation
 import XcodeKit
 
-class JsonToCodableCommand: NSObject, XCSourceEditorCommand {
+protocol XcodeCommand {
+  func command(prompt: Prompt, with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void
+}
 
-  func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+extension XcodeCommand {
+  func command(prompt type: Prompt, with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
     let code = selectedCode(from: invocation.buffer) ?? invocation.buffer.completeBuffer
-
     Task {
       do {
-        if let response = try await XcodeGPT().perform(prompt: .jsonToCodable, on: code) {
+        if let response = try await XcodeGPT().perform(prompt: type, on: code) {
           invocation.buffer.completeBuffer.append("\n\n\(response)")
           completionHandler(nil)
         }
