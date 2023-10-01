@@ -2,6 +2,8 @@
 
 This project creates an Xcode extension to offer some funcionality to the developer.
 
+This code is based -and sometimes shamelessly copied–, from this [presentation at NSSPain23 -> 5 - Transforming Software Development Workflow: Leveraging AI and ChatGPT - Daniel Muñoz](https://vimeo.com/865564098), made by Daniel Muñoz @danmunoz@mastodon.social @makias 
+
 ## IMPORTANT: Configuration
 
 To allow this project to work, you must configure two variables inside the `Configuration.swift` file:
@@ -10,19 +12,17 @@ To allow this project to work, you must configure two variables inside the `Conf
 /// This file is in the .gitignore to not to publish your api key.
 struct Configuration {
     static let apiKey: String = "<set your OpenAI API key here>"
-    static let model: String = OpenApi.model.gp4.rawString
+    static let gptModel: String = OpenApi.model.gpt4.rawValue
 }
 
-/// Defined in `OpenAPI.swift`
-enum OpenAPI {
+/// Defined in `OpenAIAPI.swift`
+enum OpenAIAPI {
     enum model: String {
         case gpt4 = "gpt4"
-        casr gpt35Turbo = "gpt-3.5-turbo"
+        case gpt3_5_turbo = "gpt-3.5-turbo"
     }
 }
 ```
-
-*If you don't set this variables correctly, a `fatalError` will close Xcode*
 
 ## Install
 
@@ -32,10 +32,14 @@ enum OpenAPI {
 
 After installing this extension will show new opctions into Xcode menu **Editor** -> **XcodeChatGPT** ->
 
+## Functitonality
 
-## Funcitonlity
+The folling commands are added to Xcode menu:
 
 - Convert JSON to Codable struct
 - Convert Codable struct to JSON
-- Generate tests
-- Custom Complete
+- Custom autocomplete
+- Generate unit tests
+- Generate documentation
+- Custom command
+- Code analysis to suggest improvements

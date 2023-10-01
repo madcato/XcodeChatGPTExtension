@@ -7,13 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC0CE5F2AC97F9C009A75FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC0CE5E2AC97F9B009A75FC /* Cocoa.framework */; };
+		0BC0CE642AC97F9C009A75FC /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE632AC97F9C009A75FC /* SourceEditorExtension.swift */; };
+		0BC0CE662AC97F9C009A75FC /* JsonToCodableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE652AC97F9C009A75FC /* JsonToCodableCommand.swift */; };
+		0BC0CE6B2AC97F9C009A75FC /* XcodeChatGPTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0BC0CE5C2AC97F9B009A75FC /* XcodeChatGPTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0BC0CE702AC97FA5009A75FC /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC0CE602AC97F9C009A75FC /* XcodeKit.framework */; };
+		0BC0CE712AC97FA5009A75FC /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC0CE602AC97F9C009A75FC /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0BC0CE742AC97FDA009A75FC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE732AC97FDA009A75FC /* Configuration.swift */; };
+		0BC0CE7D2AC98123009A75FC /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE7B2AC97FFA009A75FC /* OpenAIService.swift */; };
+		0BC0CE7E2AC98123009A75FC /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE7C2AC97FFA009A75FC /* OpenAIAPI.swift */; };
+		0BC0CE7F2AC98128009A75FC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE782AC97FFA009A75FC /* Client.swift */; };
+		0BC0CE802AC98128009A75FC /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE772AC97FFA009A75FC /* Http.swift */; };
+		0BC0CE822AC9835B009A75FC /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE812AC9835B009A75FC /* Prompt.swift */; };
+		0BC0CE842AC98D05009A75FC /* XcodeGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0CE832AC98D05009A75FC /* XcodeGPT.swift */; };
 		0BFDCAAB2AC97D270006B159 /* XcodeChatGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDCAAA2AC97D270006B159 /* XcodeChatGPTApp.swift */; };
 		0BFDCAAD2AC97D270006B159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDCAAC2AC97D270006B159 /* ContentView.swift */; };
 		0BFDCAAF2AC97D280006B159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDCAAE2AC97D280006B159 /* Assets.xcassets */; };
 		0BFDCAB22AC97D280006B159 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDCAB12AC97D280006B159 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0BC0CE692AC97F9C009A75FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BFDCA9F2AC97D270006B159 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BC0CE5B2AC97F9B009A75FC;
+			remoteInfo = XcodeChatGPTExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0BC0CE6C2AC97F9C009A75FC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0BC0CE6B2AC97F9C009A75FC /* XcodeChatGPTExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BC0CE722AC97FA5009A75FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0BC0CE712AC97FA5009A75FC /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0BC0CE5C2AC97F9B009A75FC /* XcodeChatGPTExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeChatGPTExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC0CE5E2AC97F9B009A75FC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0BC0CE602AC97F9C009A75FC /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		0BC0CE632AC97F9C009A75FC /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		0BC0CE652AC97F9C009A75FC /* JsonToCodableCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonToCodableCommand.swift; sourceTree = "<group>"; };
+		0BC0CE672AC97F9C009A75FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BC0CE682AC97F9C009A75FC /* XcodeChatGPTExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeChatGPTExtension.entitlements; sourceTree = "<group>"; };
+		0BC0CE732AC97FDA009A75FC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		0BC0CE762AC97FFA009A75FC /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		0BC0CE772AC97FFA009A75FC /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		0BC0CE782AC97FFA009A75FC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		0BC0CE7B2AC97FFA009A75FC /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		0BC0CE7C2AC97FFA009A75FC /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
+		0BC0CE812AC9835B009A75FC /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		0BC0CE832AC98D05009A75FC /* XcodeGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPT.swift; sourceTree = "<group>"; };
 		0BFDCAA72AC97D270006B159 /* XcodeChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFDCAAA2AC97D270006B159 /* XcodeChatGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeChatGPTApp.swift; sourceTree = "<group>"; };
 		0BFDCAAC2AC97D270006B159 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +86,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0BC0CE592AC97F9B009A75FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC0CE5F2AC97F9C009A75FC /* Cocoa.framework in Frameworks */,
+				0BC0CE702AC97FA5009A75FC /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BFDCAA42AC97D270006B159 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,10 +105,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC0CE5D2AC97F9B009A75FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0CE5E2AC97F9B009A75FC /* Cocoa.framework */,
+				0BC0CE602AC97F9C009A75FC /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BC0CE622AC97F9C009A75FC /* XcodeChatGPTExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0CE752AC97FFA009A75FC /* Services */,
+				0BC0CE732AC97FDA009A75FC /* Configuration.swift */,
+				0BC0CE812AC9835B009A75FC /* Prompt.swift */,
+				0BC0CE632AC97F9C009A75FC /* SourceEditorExtension.swift */,
+				0BC0CE652AC97F9C009A75FC /* JsonToCodableCommand.swift */,
+				0BC0CE832AC98D05009A75FC /* XcodeGPT.swift */,
+				0BC0CE672AC97F9C009A75FC /* Info.plist */,
+				0BC0CE682AC97F9C009A75FC /* XcodeChatGPTExtension.entitlements */,
+			);
+			path = XcodeChatGPTExtension;
+			sourceTree = "<group>";
+		};
+		0BC0CE752AC97FFA009A75FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0CE762AC97FFA009A75FC /* .keep */,
+				0BC0CE772AC97FFA009A75FC /* Http.swift */,
+				0BC0CE782AC97FFA009A75FC /* Client.swift */,
+				0BC0CE7A2AC97FFA009A75FC /* OpenAI */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0BC0CE7A2AC97FFA009A75FC /* OpenAI */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0CE7B2AC97FFA009A75FC /* OpenAIService.swift */,
+				0BC0CE7C2AC97FFA009A75FC /* OpenAIAPI.swift */,
+			);
+			path = OpenAI;
+			sourceTree = "<group>";
+		};
 		0BFDCA9E2AC97D270006B159 = {
 			isa = PBXGroup;
 			children = (
 				0BFDCAA92AC97D270006B159 /* XcodeChatGPT */,
+				0BC0CE622AC97F9C009A75FC /* XcodeChatGPTExtension */,
+				0BC0CE5D2AC97F9B009A75FC /* Frameworks */,
 				0BFDCAA82AC97D270006B159 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0BFDCAA72AC97D270006B159 /* XcodeChatGPT.app */,
+				0BC0CE5C2AC97F9B009A75FC /* XcodeChatGPTExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +191,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0BC0CE5B2AC97F9B009A75FC /* XcodeChatGPTExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BC0CE6F2AC97F9C009A75FC /* Build configuration list for PBXNativeTarget "XcodeChatGPTExtension" */;
+			buildPhases = (
+				0BC0CE582AC97F9B009A75FC /* Sources */,
+				0BC0CE592AC97F9B009A75FC /* Frameworks */,
+				0BC0CE5A2AC97F9B009A75FC /* Resources */,
+				0BC0CE722AC97FA5009A75FC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcodeChatGPTExtension;
+			productName = XcodeChatGPTExtension;
+			productReference = 0BC0CE5C2AC97F9B009A75FC /* XcodeChatGPTExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		0BFDCAA62AC97D270006B159 /* XcodeChatGPT */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BFDCAB62AC97D280006B159 /* Build configuration list for PBXNativeTarget "XcodeChatGPT" */;
@@ -79,10 +216,12 @@
 				0BFDCAA32AC97D270006B159 /* Sources */,
 				0BFDCAA42AC97D270006B159 /* Frameworks */,
 				0BFDCAA52AC97D270006B159 /* Resources */,
+				0BC0CE6C2AC97F9C009A75FC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0BC0CE6A2AC97F9C009A75FC /* PBXTargetDependency */,
 			);
 			name = XcodeChatGPT;
 			productName = XcodeChatGPT;
@@ -99,6 +238,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					0BC0CE5B2AC97F9B009A75FC = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					0BFDCAA62AC97D270006B159 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -118,11 +260,19 @@
 			projectRoot = "";
 			targets = (
 				0BFDCAA62AC97D270006B159 /* XcodeChatGPT */,
+				0BC0CE5B2AC97F9B009A75FC /* XcodeChatGPTExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0BC0CE5A2AC97F9B009A75FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BFDCAA52AC97D270006B159 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +285,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0BC0CE582AC97F9B009A75FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC0CE7E2AC98123009A75FC /* OpenAIAPI.swift in Sources */,
+				0BC0CE822AC9835B009A75FC /* Prompt.swift in Sources */,
+				0BC0CE742AC97FDA009A75FC /* Configuration.swift in Sources */,
+				0BC0CE842AC98D05009A75FC /* XcodeGPT.swift in Sources */,
+				0BC0CE7F2AC98128009A75FC /* Client.swift in Sources */,
+				0BC0CE642AC97F9C009A75FC /* SourceEditorExtension.swift in Sources */,
+				0BC0CE662AC97F9C009A75FC /* JsonToCodableCommand.swift in Sources */,
+				0BC0CE7D2AC98123009A75FC /* OpenAIService.swift in Sources */,
+				0BC0CE802AC98128009A75FC /* Http.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BFDCAA32AC97D270006B159 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,7 +312,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0BC0CE6A2AC97F9C009A75FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BC0CE5B2AC97F9B009A75FC /* XcodeChatGPTExtension */;
+			targetProxy = 0BC0CE692AC97F9C009A75FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0BC0CE6D2AC97F9C009A75FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XcodeChatGPTExtension/XcodeChatGPTExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW65EXAM4U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XcodeChatGPTExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XcodeChatGPTExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.veladan.XcodeChatGPT.XcodeChatGPTExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0BC0CE6E2AC97F9C009A75FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XcodeChatGPTExtension/XcodeChatGPTExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW65EXAM4U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XcodeChatGPTExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XcodeChatGPTExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.veladan.XcodeChatGPT.XcodeChatGPTExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		0BFDCAB42AC97D280006B159 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -268,6 +496,7 @@
 		0BFDCAB72AC97D280006B159 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XcodeChatGPT/XcodeChatGPT.entitlements;
@@ -295,6 +524,7 @@
 		0BFDCAB82AC97D280006B159 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XcodeChatGPT/XcodeChatGPT.entitlements;
@@ -322,6 +552,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0BC0CE6F2AC97F9C009A75FC /* Build configuration list for PBXNativeTarget "XcodeChatGPTExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BC0CE6D2AC97F9C009A75FC /* Debug */,
+				0BC0CE6E2AC97F9C009A75FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0BFDCAA22AC97D270006B159 /* Build configuration list for PBXProject "XcodeChatGPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
