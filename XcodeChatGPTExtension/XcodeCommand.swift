@@ -35,6 +35,6 @@ extension XcodeCommand {
         text.append(line)
       }
     }
-    return text.trimmingCharacters(in: .whitespacesAndNewlines)
+    return text.isEmpty ? nil : text.trimmingCharacters(in: .whitespacesAndNewlines)
   }
 }

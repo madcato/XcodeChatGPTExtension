@@ -7,7 +7,7 @@
 
 enum OpenAIAPI {
     enum model: String {
-      case gpt4 = "gpt4"
+      case gpt4 = "gpt-4"
       case gpt3_5_turbo = "gpt-3.5-turbo"
     }
 
