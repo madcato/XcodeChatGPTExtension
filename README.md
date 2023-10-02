@@ -36,7 +36,7 @@ enum OpenAIAPI {
 
 After installing and executing this extension will show new opctions into Xcode menu **Editor** -> **XcodeChatGPT** ->
 
-## Functitonality
+## Functionality
 
 The folling commands are added to Xcode menu:
 
