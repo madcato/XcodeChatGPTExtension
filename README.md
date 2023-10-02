@@ -1,10 +1,10 @@
 # XcodeChatGPT
 
-This project creates an Xcode extension to offer some funcionality to the developer.
+This project creates an Xcode extension that offers some functionality to the developer.
 
-This code is based -and sometimes shamelessly copied–, from this [presentation at NSSPain23 -> 5 - Transforming Software Development Workflow: Leveraging AI and ChatGPT - Daniel Muñoz](https://vimeo.com/865564098), made by Daniel Muñoz @danmunoz@mastodon.social @makias 
+This code is based -and sometimes shamelessly copied–, from this [presentation at NSSPain23 -> 5 - Transforming Software Development Workflow: Leveraging AI and ChatGPT - Daniel Muñoz](https://vimeo.com/865564098), made by Daniel Muñoz @danmunoz@mastodon.social @makias .
 
-## IMPORTANT: Configuration
+## IMPORTANT: Configure OpenAI API key
 
 To allow this project to work, you must configure two variables inside the `Configuration.swift` file:
 
@@ -27,10 +27,14 @@ enum OpenAIAPI {
 ## Install
 
 1. git clone this project onto your macOS.
-2. Build this project with Xcode.
+2. Build this project with Xcode. Change team and bundleId if needed.
 3. Allow this extension to be loaded into Xcode in **System Settings** -> **Extensions** -> **Xcode Source Editor**.
+4. Build and archive
+5. Open organizer, then right click to select “show in finder”.
+6. Show content of the archived file.
+7. Drag Production/Application/XcodeChatGPT to your system Application folder
 
-After installing this extension will show new opctions into Xcode menu **Editor** -> **XcodeChatGPT** ->
+After installing and executing this extension will show new opctions into Xcode menu **Editor** -> **XcodeChatGPT** ->
 
 ## Functitonality
 
