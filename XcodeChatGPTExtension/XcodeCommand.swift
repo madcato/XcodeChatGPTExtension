@@ -37,4 +37,13 @@ extension XcodeCommand {
     }
     return text.isEmpty ? nil : text.trimmingCharacters(in: .whitespacesAndNewlines)
   }
+
+  ///  Find the cursor position
+  ///  * Parameters
+  ///   - from buffer XCSourceTextBuffer. Found it in `invocation.buffer`
+  ///  * Returns (line, colum) of the cursos position or nil if not found
+  func cursorPosition(from buffer: XCSourceTextBuffer) -> (Int, Int)? {
+    guard let cursor = (buffer.selections.lastObject as? XCSourceTextRange)?.end else { return nil }
+    return (cursor.line, cursor.column)
+  }
 }
